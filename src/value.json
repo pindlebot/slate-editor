@@ -1,0 +1,29 @@
+{
+  "document": {
+    "nodes": [
+      {
+        "object": "block",
+        "type": "code-block",
+        "data": {
+          "language": "js"
+        },
+        "nodes": [
+          {
+            "object": "block",
+            "type": "code-line",
+            "nodes": [
+              {
+                "object": "text",
+                "leaves": [
+                  {
+                    "text": "var x"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

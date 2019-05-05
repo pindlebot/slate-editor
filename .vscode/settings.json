@@ -1,0 +1,8 @@
+{
+  "javascript.format.enable": false,
+  "standard.enable": true,
+  "standard.workingDirectories": ["src"],
+  "standard.options": {
+    "parser": "babel-eslint"
+  }
+}
