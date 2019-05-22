@@ -201,12 +201,19 @@ class RichTextExample extends React.Component {
 
   unwrapBlock = (event, editor) => {
     const startParent = editor.value.document.getParent(editor.value.startBlock.key)
-
     event.preventDefault()
-    editor.setBlocks(blockTypes.UNSTYLED)
-
     if (startParent && startParent.object !== 'document') {
-      editor.unwrapBlock(startParent.type)
+      const parent = editor.value.document.getParent(startParent.key)
+      const text = Text.create()
+      const block = Block.create({
+        type: blockTypes.UNSTYLED,
+        nodes: List([text])
+      })
+
+      editor
+        .removeNodeByKey(editor.value.startBlock.key)
+        .insertNodeByKey(parent.key, parent.nodes.size, block)
+        .moveToEndOfNode(text)
     }
   }
 

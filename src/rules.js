@@ -10,7 +10,6 @@ const rules = [{
       case blockTypes.UNSTYLED:
         return (<p>{children}</p>)
       case blockTypes.CODE:
-        console.log({ children })
         return (<pre><code>{obj.text}</code></pre>)
       case blockTypes.CODE_LINE:
         return null
